@@ -65,7 +65,7 @@ header.active {
 
 .logo-div-1 {
     width: 50%;
-    height: 46px;
+    height: 48px;
     background: transparent;
     border: 2px solid var(--main-color);
     position: absolute;
@@ -80,7 +80,7 @@ header.active {
 
 .logo-div-2 {
     width: 56%;
-    height: 57px;
+    height: 52px;
     background: linear-gradient(to right, rgba(50, 57,70, 1), var(--second-bg-color));
     position: absolute;
     top: 0;
@@ -482,6 +482,14 @@ section::-webkit-scrollbar-thumb {
     overflow: auto;
 }
 
+.resume-list-sp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    height: 40rem;
+    overflow: auto;
+}
+
 .resume-list::-webkit-scrollbar {
     width: .6rem;
 }
@@ -508,6 +516,19 @@ section::-webkit-scrollbar-thumb {
     overflow-y: auto;
 }
 
+.resume-list-sp .resume-item-sp {
+    background: var(--second-bg-color);
+    border-radius: 1.5rem;
+    padding: 3rem 2.5rem;
+    height: calc(38rem - 2rem);
+    /* display: flex; */
+    /* *** */
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
 .resume-item.skill {
      display: flex;
     /* *** */
@@ -520,7 +541,15 @@ section::-webkit-scrollbar-thumb {
     width: 0;
 }
 
+.resume-item-sp::-webkit-scrollbar {
+    width: 0;
+}
+
 .resume-item .year {
+    color: var(--main-color);
+}
+
+.resume-item-sp .year {
     color: var(--main-color);
 }
 
@@ -554,13 +583,35 @@ section::-webkit-scrollbar-thumb {
     /* margin-bottom:1rem ; */
 }
 
+.resume-item-sp h3 {
+    font-size: 2.2rem;
+    /* margin-bottom:1rem ; */
+}
+
 .resume-item .company {
     position: relative;
     margin-left: 2rem;
     margin-bottom: 2rem;
 }
 
+.resume-item-sp .company {
+    position: relative;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
 .resume-item .company::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: .5rem;
+    background: var(--main-color);
+    border-radius: 50%;
+    margin-left: -2rem;
+}
+
+.resume-item-sp .company::before {
     content: '';
     position: absolute;
     top: 50%;
