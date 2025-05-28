@@ -170,7 +170,7 @@ const buttonDown = document.getElementById("downloadBtn");
 
 buttonDown.addEventListener("click", function() {
     const link = document.createElement("a");
-    link.href = "files/thanuka_dilshan_cv.pdf";
+    link.href = "./files/thanuka_dilshan_cv.pdf";
     link.download = "thanuka_dilshan_cv.pdf";
     link.click();
 });
